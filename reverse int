@@ -1,0 +1,24 @@
+
+n = -321
+flag = 0
+
+if n<0:
+    flag = 1 
+    n = abs(n)
+
+rev = 0
+rem = 0
+
+while n !=0 :
+    rem = n % 10
+    print('rem: ', rem)
+    rev  = rev *10 + rem
+    print('rev ', rev)
+    n = int(n/10)
+    print(' new n', n)
+
+if flag ==1:
+    n = -1 *rev
+    print('rev num:: ',n)
+else:
+    print('reverse num: ', n)
