@@ -1,0 +1,7 @@
+nums = [23, 45, -9, 99]
+max_nums = -float('inf')
+
+for i in nums:
+    if i > max_nums:
+        max_nums = i
+print(max_nums)       
