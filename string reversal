@@ -1,0 +1,23 @@
+#using swap methode (in-place)
+
+s = 'reverse'
+s_list = list(s)
+
+
+for i in range(0,int(len(s_list)/2)):
+    s_list[i], s_list[len(s_list)-i-1] = s_list[len(s_list)-i-1] , s_list[i]
+print(s_list)
+
+rev = ''.join(s_list)
+print(rev)
+
+#using stack:
+s = 'reverse'
+stack = []
+
+for i in range(len(s)-1, -1, -1):
+    stack.append(s[i])
+print(stack)
+
+rev= ''.join(stack)
+print(rev)
