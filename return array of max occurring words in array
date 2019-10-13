@@ -1,0 +1,23 @@
+nums =['geeks', 'for', 'geeks']
+dict = {}
+res = []
+
+for i in range(len(nums)):
+    if nums[i] not in dict:
+        dict[nums[i]] = 1
+    else:
+         dict[nums[i]] =  dict[nums[i]] + 1
+
+max_freq = -float('inf')
+
+for i in dict:
+    if dict[i] > max_freq:
+        max_freq = dict[i]
+        
+#print(max_freq)
+
+for i in dict:
+    if (dict[i] == max_freq):
+        res.append(i)
+
+print('max frequency array: ', res)
