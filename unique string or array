@@ -1,0 +1,13 @@
+//using stack
+
+nums ='abcabcdef'
+stack = []
+
+
+for i in nums:
+    if i not in stack:
+        stack.append(i)
+    else:
+        continue
+
+print("unique string is: ", stack)
