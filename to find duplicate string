@@ -1,0 +1,34 @@
+// method 1 using set:
+
+nums ='abcabcdef'
+unique = set()
+res =[]
+
+for i in nums:
+    if i not in unique:
+        unique.add(i)
+    else:
+        res.append(i)
+
+print("duplictae elemests: " , res)
+
+// method 2 using dictionary:
+
+nums ='abcabcdef'
+unique = {}
+res = []
+
+for i in range(0, len(nums)):
+    if nums[i] not in unique:
+        unique[nums[i]] = 1
+    else:
+        unique[nums[i]] = unique[nums[i]] +1
+
+
+print("dictionary : " , unique)
+
+for i in unique:
+    if unique[i] > 1:
+        res.append(i)
+
+print("duplicate elements : " , res)
