@@ -1,0 +1,26 @@
+n = 123215
+n1 = 12321
+
+flag = 0
+if n<0:
+    flag = 1 
+    n = abs(n)
+
+rev = 0
+rem = 0
+
+while n !=0 :
+    rem = n % 10
+    rev  = rev *10 + rem
+    n = int(n/10)
+
+if flag ==1:
+    n = -1 *rev
+    print('rev num:: ',rev)
+else:
+    print('reverse num: ', rev)
+    
+if n1 == rev:
+    print('palindrome')
+else:
+    print('not palindrome')
