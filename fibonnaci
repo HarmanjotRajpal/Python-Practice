@@ -1,0 +1,35 @@
+# recursive:
+
+def fib(n):
+    if (n<0):
+        return 'incorrect input'
+    elif (n == 0):
+        return 0
+    elif (n==1):
+        return 1 
+    else:
+        return fib(n-1)+ fib(n-2) 
+
+ans = fib(7)
+print(ans)
+
+
+#iterative
+def fib(n):
+    if (n<0):
+        return 'incorrect input'
+    else:
+        if (n ==0):
+            return 0
+        else:
+            n1 =0
+            n2 = 1 
+            for i in range(1,n):
+                res = n1 + n2
+                n1 = n2
+                n2 = res
+        return res
+        
+
+ans = fib(6)
+print(ans)
