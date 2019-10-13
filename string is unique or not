@@ -1,0 +1,14 @@
+nums ='abcabcdef'
+unique = {}
+flag = 0
+
+for i in range(0, len(nums)):
+    if nums[i] not in unique:
+        unique[nums[i]] = 1
+    else:
+        flag = 1
+
+if(flag == 0):
+    print('string is unique')
+else:
+    print('string is not uniqe.')
