@@ -1,0 +1,27 @@
+# for array
+nums =['geeks', 'for', 'geeks']
+dict = {}
+
+
+for i in range(len(nums)):
+    if nums[i] not in dict:
+        dict[nums[i]] = 1
+    else:
+         dict[nums[i]] =  dict[nums[i]] + 1
+
+print(dict)
+
+# for string
+
+
+nums ='geeksforgeeks'
+dict = {}
+
+
+for i in range(len(nums)):
+    if nums[i] not in dict:
+        dict[nums[i]] = 1
+    else:
+         dict[nums[i]] =  dict[nums[i]] + 1
+
+print(dict)
