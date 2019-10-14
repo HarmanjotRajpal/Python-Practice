@@ -1,0 +1,12 @@
+
+def rev(head):
+    prev = None
+    current = head
+    
+    while curr is not None:
+        temp = curr.next
+        curr.next = prev
+        prev = curr
+        curr = temp
+        
+    return prev
