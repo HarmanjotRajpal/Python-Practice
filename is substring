@@ -1,0 +1,22 @@
+def isSubstring(s1, s2):
+    
+    m = len(s1)
+    n = len(s2)
+    
+    for i in range(n-m+1):
+        for j in range(m):
+            if(s2[i+j] != s1[j]):
+                break
+        if j+1 ==m:
+            return i
+    return -1
+
+s1 = "fore"
+s2 = "geeksforgeeks"
+
+res = isSubstring(s1, s2)
+
+if  res == -1:
+    print('not a substring')
+else:
+    print('substring at : ', res)
