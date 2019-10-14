@@ -1,0 +1,17 @@
+s = [1,2,3,4,5,6]
+head = s[0]
+slow =  head
+fast = head
+
+if slow is None:
+    return None
+
+while fast.next is not None and fast.next.next is not None:
+    slow = slow.next
+    fast = fast.next.next
+
+        
+if fast.next is None:
+    return slow
+if fast.next.next is None:
+    return slow.next
