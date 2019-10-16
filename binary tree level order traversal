@@ -1,0 +1,21 @@
+        if root is None:
+            return []
+        
+        q = []
+        res = []
+        q.append(root)
+        
+        while len(q)!=0:
+            temp = []
+            for items in q:
+                temp.append(items.val)
+            res.append(temp)
+            
+            t= []
+            for item in q:
+                if item.left:
+                    t.append(item.left)
+                if item.right:
+                    t.append(item.right)
+            q = t
+        return res
