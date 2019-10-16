@@ -1,0 +1,24 @@
+arr = [1,2,3,4,5,1,2,7,8,9,9,9,9,9,9]
+
+dict = {}
+for i in range (0, len(arr)):
+    if arr[i] not in dict:
+        dict[arr[i]] =  1 
+    else:
+        dict[arr[i]] = dict[arr[i]] + 1 
+print(dict)
+
+
+#sorting on key
+
+for key in sorted(dict):
+    print("sorted dict: ", key, " ", dict[key])
+    
+
+#sorting using value
+
+dict2 = {}
+dict2 = sorted(dict.items(), key = lambda k:k[1], reverse = True)
+
+print("----------")
+print(dict2)
