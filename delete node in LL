@@ -1,0 +1,19 @@
+# 1->2->3->4->5->null
+# del 2 
+
+l = head
+del_val = 2
+
+if (l.val == del_val):
+	head = head.next
+	l = head
+else:
+	while l is not None and l.next is not None:
+		if (l.next.val == del_val):
+			if (l.next.next is not None):
+				l.next =  l.next.next
+				break
+			else: 
+				l.next = None
+				break
+		l = l.next
