@@ -11,3 +11,26 @@ for i in nums:
         continue
 
 print("unique string is: ", stack)
+
+
+
+
+++++++++++++++++
+remove duplicate in array
++++++++++++++++
+
+s = ['a', 'b', 'b']
+
+def remDuplicate(s):
+ 
+    res = []
+
+    for i in s:
+        if i not in res:
+            res.append(i)
+
+    return res
+    
+ans = remDuplicate(s)
+
+print(" unique array is: ", ans)
