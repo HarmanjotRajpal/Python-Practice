@@ -1,0 +1,30 @@
+
+def pal_calc(s, start, end):
+    
+    if(start == end):
+        return True
+    
+    if s[start] != s[end]:
+        return False
+    
+    if start < end :
+        return pal_calc(s, start+1, end-1)
+        
+    return True
+
+def palindrome(s):
+    
+    n = len(s)
+    
+    if n ==0:
+        return True
+    else:
+        return pal_calc(s,0,n-1)
+
+
+s = ""
+
+if(palindrome(s)):
+    print('palindrome')
+else:
+    print('not palindrome')
